@@ -18,7 +18,7 @@ void	check_for_occurence(char *tab, char *str, char to_find, int len, int *count
 	}
 	if (!found)
 	{
-		printf ("\033[1;33mtry again !\033[0m\n");
+		printf ("\033[1;33mtry again!\033[0m\n");
 		(*count)++;
 	}
 	display_word (tab, len);

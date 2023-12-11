@@ -1,15 +1,5 @@
 #include "pendu.h"
 
-void welcome()
-{
-	printf("Welcome to the hangman game\n");
-	sleep(1);
-	printf("Try to guess the secret word by entering letters one by one on the keyboard\n");
-	sleep(1);
-	printf("Be careful, the game is case sensitive\n");
-	printf("\n");
-}
-
 int main()
 {
 	char	*str;
@@ -18,13 +8,13 @@ int main()
 	char	to_find;
 	int		count;
 
-	str = "Hello";
+	str = "bitches";
 	len = ft_strlen(str);
 	tab = create_tab(len);
 	count = 0;
 
 	welcome();
-	sleep(3);
+	sleep(2);
 	printf ("Here is the word you have to guess: ");
 	display_word(tab, len);
 
@@ -32,7 +22,7 @@ int main()
 	{
 		printf ("Enter a letter: ");
 		to_find = getchar();
-		getchar();
+		while(getchar() != '\n');
 
 		check_for_occurence(tab, str, to_find, len, &count);
 		if (count == len)

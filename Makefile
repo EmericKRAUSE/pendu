@@ -6,7 +6,8 @@ SRC = src/check_for_occurence.c\
 		src/create_tab.c\
 		src/display_word.c\
 		src/ft_strlen.c\
-		src/is_finished.c
+		src/is_finished.c\
+		src/welcome.c
 
 MAIN = pendu.c
 EXE = exe
