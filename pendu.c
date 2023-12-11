@@ -1,6 +1,6 @@
 #include "pendu.h"
 
-int main()
+int	main(void)
 {
 	char	*str;
 	int		len;
@@ -12,18 +12,18 @@ int main()
 	len = ft_strlen(str);
 	tab = create_tab(len);
 	count = 0;
-
 	welcome();
-	sleep(2);
-	printf ("Here is the word you have to guess: ");
 	display_word(tab, len);
-
 	while (1)
 	{
 		printf ("Enter a letter: ");
 		to_find = getchar();
-		while(getchar() != '\n');
-
+		if (to_find == '\n')
+		{
+			printf("\033[1;33mPlease enter a letter\n\033[0m");
+			continue ;
+		}
+		while (getchar() != '\n');
 		check_for_occurence(tab, str, to_find, len, &count);
 		if (count == len)
 		{

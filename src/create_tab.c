@@ -2,8 +2,8 @@
 
 char	*create_tab(int len)
 {
-	char *tab;
-	int	i;
+	char	*tab;
+	int		i;
 
 	tab = malloc(sizeof(char) * len + 1);
 	i = 0;

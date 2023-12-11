@@ -3,12 +3,18 @@
 void	check_for_occurence(char *tab, char *str, char to_find, int len, int *count)
 {
 	int	i;
-	int found;
+	int	found;
 
 	i = 0;
 	found = 0;
-	while(str[i])
+	while (str[i])
 	{
+		if (str[i] == to_find && str[i] == tab[i])
+		{
+			printf("\033[1;33mPlease enter another letter...\n\033[0m");
+			found = 1;
+			break ;
+		}
 		if (str[i] == to_find)
 		{
 			tab[i] = to_find;

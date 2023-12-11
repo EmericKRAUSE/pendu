@@ -1,6 +1,6 @@
 #include "../pendu.h"
 
-void welcome()
+void	welcome(void)
 {
 	printf("Welcome to the hangman game.\n");
 	sleep(1);
@@ -8,4 +8,6 @@ void welcome()
 	sleep(1);
 	printf("Be careful, the game is case sensitive.\n");
 	printf("\n");
+	sleep(2);
+	printf ("Here is the word you have to guess: ");
 }

@@ -2,7 +2,7 @@
 
 int	is_finished(char *tab)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (tab[i])
