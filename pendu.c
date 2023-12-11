@@ -6,7 +6,8 @@ void welcome()
 	sleep(1);
 	printf("Try to guess the secret word by entering letters one by one on the keyboard\n");
 	sleep(1);
-	pritnf("Be careful, the game is case sensitive\n");
+	printf("Be careful, the game is case sensitive\n");
+	printf("\n");
 }
 
 int main()
@@ -23,13 +24,14 @@ int main()
 	count = 0;
 
 	welcome();
-	sleep(5);
+	sleep(3);
+	printf ("Here is the word you have to guess: ");
 	display_word(tab, len);
 
 	while (1)
 	{
-		printf ("letter to find :");
-		scanf ("%c", &to_find);
+		printf ("Enter a letter: ");
+		to_find = getchar();
 		getchar();
 
 		check_for_occurence(tab, str, to_find, len, &count);
